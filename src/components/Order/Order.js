@@ -5,7 +5,7 @@ import Payment from '../Payment/Payment';
 
 
 const Order = () => {
-    const [user,setUser,servicePhoto,setServicePhoto]=useContext(userContext);
+    const [user,setUser,servicePhoto,setServicePhoto,paymentError,setPaymentError,paymentSuccess,setPaymentSuccess]=useContext(userContext);
     const {idNumber} = useParams();
     const found = servicePhoto.find(Element => Element._id === idNumber);
     
@@ -14,8 +14,9 @@ const Order = () => {
         const order ={
             name:user.name,
             email:user.email,
-            serviceName:found.name,
-            image:found.image,
+            serviceName:found.title,
+            image:found.imageURL,
+            paymentId:paymentSuccess,
             price:found.price,
             date: new Date(),
         }
@@ -35,18 +36,23 @@ const Order = () => {
     return (
         <div className="container" style={{marginTop:'20px'}}>
 
-            {
-                found && <div className="row">
+            
+                 <div className="row">
                    <div className="col-md-6">
                      <Payment></Payment>
                    </div>
                     <div className="col-md-6">
+                        <img src={found.imageURL} alt=""/>
                        <h5>Name : {user.name}</h5>
                        <p>Price : {found.price}</p>
-                       <button onClick={handleOrder}>Get</button>
+                       <p>title : {found.title}</p>
+                       <p>description : {found.description}</p>
+                       {
+                         paymentSuccess &&  <button onClick={handleOrder}>Get</button>
+                       }
                     </div>
                 </div>
-            }
+            
       
      </div>
     );

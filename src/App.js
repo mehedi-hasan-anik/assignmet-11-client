@@ -28,11 +28,12 @@ function App() {
     photo:'',
  })
  const [servicePhoto,setServicePhoto]=useState([]);
-
+ const [paymentError,setPaymentError]=useState(null)
+ const [paymentSuccess,setPaymentSuccess]=useState(null)
  
 
   return (
-    <userContext.Provider value={[user,setUser,servicePhoto,setServicePhoto]}>
+    <userContext.Provider value={[user,setUser,servicePhoto,setServicePhoto,paymentError,setPaymentError,paymentSuccess,setPaymentSuccess]}>
     <Router>
 
       <Header></Header>
