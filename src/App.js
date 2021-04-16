@@ -16,6 +16,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Contact from './components/Contact/Contact';
 import NotFound from './components/NotFound/NotFound';
 import OrderList from './components/OrderList/OrderList';
+import Order from './components/Order/Order';
 
 export const userContext = createContext();
 
@@ -27,6 +28,8 @@ function App() {
     photo:'',
  })
  const [servicePhoto,setServicePhoto]=useState([]);
+
+ 
 
   return (
     <userContext.Provider value={[user,setUser,servicePhoto,setServicePhoto]}>
@@ -54,6 +57,9 @@ function App() {
           <Route path="/contact">
               <Contact></Contact>
           </Route>
+          <PrivateRoute path="/order/:idNumber">
+              <Order></Order>
+           </PrivateRoute>
           <Route  path="/orderList">
               <OrderList></OrderList>
           </Route>
