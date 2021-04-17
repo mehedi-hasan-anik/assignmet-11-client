@@ -19,6 +19,7 @@ const Order = () => {
             paymentId:paymentSuccess,
             price:found.price,
             date: new Date(),
+            description:found.description
         }
 
         fetch('http://localhost:8080/addOrder',{
@@ -42,7 +43,7 @@ const Order = () => {
                      <Payment></Payment>
                    </div>
                     <div className="col-md-6">
-                        <img src={found.imageURL} alt=""/>
+                        <img src={found.imageURL} alt="" style={{width:'100px'}}/>
                        <h5>Name : {user.name}</h5>
                        <p>Price : {found.price}</p>
                        <p>title : {found.title}</p>

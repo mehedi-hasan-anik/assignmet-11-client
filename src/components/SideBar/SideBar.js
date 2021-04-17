@@ -11,6 +11,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AddService from '../AddService/AddService';
 import MakeAddmin from '../MakeAddmin/MakeAddmin';
 import ManageService from '../ManageService/ManageService';
+import ReviewArea from '../ReviewArea/ReviewArea';
 
 
 
@@ -23,6 +24,9 @@ const SideBar = () => {
                      <ul>
                              <li>
                                  <Link to="/orderlist" style={{ fontSize:'20px'}}>OrderList</Link>
+                             </li>
+                             <li>
+                             <Link to="/review" style={{ fontSize:'20px'}}>Review</Link>
                              </li>
                              <li>
                              <Link to="/addService" style={{ fontSize:'20px'}}>Add Service</Link>
@@ -45,6 +49,9 @@ const SideBar = () => {
                      </Route>
                      <Route path="/makeAdmin">
                          <MakeAddmin></MakeAddmin>
+                     </Route>
+                     <Route path="/review">
+                         <ReviewArea></ReviewArea>
                      </Route>
                      <Route path="/manageService">
                          <ManageService></ManageService>
