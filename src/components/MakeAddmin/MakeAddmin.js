@@ -22,8 +22,8 @@ const MakeAddmin = () => {
     }
     return (
         <div className="container">
-           <div style={{margin:'0 auto'}}>
-                <form onSubmit={handleSubmit(onSubmit)}>
+           <div style={{margin:'0 auto',width:'100%',maxWidth:'300px'}}>
+                <form onSubmit={handleSubmit(onSubmit)} >
                         <input name="email" defaultValue="" ref={register} placeholder="email" />
                         <input type="submit" />
                 </form>

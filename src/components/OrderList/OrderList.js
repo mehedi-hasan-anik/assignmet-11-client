@@ -16,7 +16,7 @@ const OrderList = () => {
 
     return (
         <div className="container">
-            <h1 style={{textAlign:'center'}}>Order List </h1>
+            <h1 style={{textAlign:'center'}}>Service List </h1>
             <h3 style={{textAlign:'center'}}>{user.name}</h3>
             <div className="row">
                 {
