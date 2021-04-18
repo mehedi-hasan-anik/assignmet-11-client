@@ -13,7 +13,7 @@ const ManageServiceCard = ({event}) => {
     }
     return (
         <div className="container card card-area">
-            <img style={{width:'100%'}} src={event.imageURL} alt=""/>
+            <img style={{width:'100%',height:'200px'}} src={event.imageURL} alt=""/>
             <h5>{event.title}</h5>
             <p>{event.description}</p>
             <p>{event.price}</p>

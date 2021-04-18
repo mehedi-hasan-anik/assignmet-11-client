@@ -22,8 +22,7 @@ const ServiceArea = () => {
     return (
         <div className="container" style={{marginTop:'100px'}}>
 
-            <h5 className="text-center ">Service</h5>
-            <h3 className="text-center" style={{color:'#0000FF',marginBottom:'50px'}}>We are an agency tailored to all <br/> client needs that always delivers</h3>
+            <h2 className="text-center mb-5 text-primary">Service</h2>
            
           {
               loading &&  <div className="row">

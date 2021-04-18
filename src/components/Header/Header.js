@@ -7,7 +7,7 @@ const Header = () => {
         <div className="container">
         <div className="row full-header-area">
              <div className="col-lg-4 col-md-12 col-sm-12 logo-area">
-                  <h1 style={{textAlign:'center'}}>Luxury Living</h1>
+                  <h1 style={{textAlign:'center'}}>Lock Smith</h1>
              </div>
              <div className="col-lg-8 col-md-12 col-sm-12 nav-area">
                  <div>
